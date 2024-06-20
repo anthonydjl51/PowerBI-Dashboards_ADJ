@@ -1,0 +1,17 @@
+select x.code, isnull (x.description,'Total Campus-Based') as FundDescription,x.FundType
+,sum(Number_of_Awards) as Number_of_Awards, sum amount as Amount, (select sum (Number_of_Awards * Amount)) as Total_Award_Amount,x.ACADEMICYEARANDTERM
+
+FROM (
+select count (l.code) as Number_of_Awards, amount, l.code,Description, ACADEMICYEARANDTERM, (select (ft.code)) as FundType
+from student s
+join dataset d on s.datasetid=d.id
+join institution i on s.id=i.id
+join studentfundtypelookup sftl on s.id=sftl.studentid
+join fundtypelookup l on l.id=ftl.lookupid
+join fundtype ft on ft.id=ftl.fundtypeid
+join lookup l on l.id=ftl.lookupid
+where s.datasetid=11111 and ft.code= 'Test-Code'
+group by amount, l.code, ft.code,description,academicyearandterm
+) x
+
+group by grouping sets ((x.code,x.description,x.fundtype, x.number_of_awards,academicyearandterm,amount),())
