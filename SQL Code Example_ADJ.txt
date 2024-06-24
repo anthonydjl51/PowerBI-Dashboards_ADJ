@@ -7,7 +7,7 @@ from student s
 join dataset d on s.datasetid=d.id
 join institution i on s.id=i.id
 join studentfundtypelookup sftl on s.id=sftl.studentid
-join fundtypelookup l on l.id=ftl.lookupid
+join fundtypelookup ftl on l.id=ftl.lookupid
 join fundtype ft on ft.id=ftl.fundtypeid
 join lookup l on l.id=ftl.lookupid
 where s.datasetid=11111 and ft.code= 'Test-Code'
