@@ -10,9 +10,9 @@ This Power BI project tracks KPIs (sales, revenue, profit, etc.), compares regio
 This query runs a QC report that shows all of the amount spent on financial assistance.
 
 
-#Video Game Sales
+# Video Game Sales
 
-##Recommended Analysis
+## Recommended Analysis
 1.	Which titles sold the most worldwide? 
 •	Finding: Grand Theft Auto V was the most sold game of all time. 
 •	Method: Utilized tables and cards to show the top game. In Sales by Region dashboard, you can see the Top 10 games.
