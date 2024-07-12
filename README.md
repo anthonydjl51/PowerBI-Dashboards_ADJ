@@ -10,7 +10,7 @@ This Power BI project tracks KPIs (sales, revenue, profit, etc.), compares regio
 This query runs a QC report that shows all of the amount spent on financial assistance.
 
 
-# Video Game Sales
+# Dashboard Project: Video Game Sales
 
 ## Recommended Analysis
 1.	Which titles sold the most worldwide? 
